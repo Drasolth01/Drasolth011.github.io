@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emre Kılıç - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Emre Kılıç</h1>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Emre Kılıç, a passionate web developer with a keen interest in creating dynamic and user-friendly websites. I enjoy solving complex problems and continuously learning new technologies to improve my skills.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Emre Kılıç</p>
+</footer>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+        document.querySelectorAll('nav a').forEach(el => el.classList.toggle('dark-mode'));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    });
+</script>
+
+</body>
+</html>
